@@ -1,6 +1,7 @@
 <template>
   <div>
-    <head-bar pageTitle="contactSupport">
+    <!-- <head-bar pageTitle="contactSupport"> -->
+    <base-layout :user="user">
       <v-container
         fluid
       >
@@ -8,7 +9,11 @@
           class="d-flex justify-center align-center"
           style="height: 90vh;"
         >
-          <v-col>
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+          >
             <div class="text-center text-justify ma-2">
               <v-btn
                 color="next"
@@ -45,15 +50,21 @@
           </v-col>
         </v-row>
       </v-container>
-    </head-bar>
+    </base-layout>
+    <!-- </head-bar> -->
   </div>
 </template>
 
 <script>
-  import HeadBar from '@/components/HeadBar.vue'
+  import BaseLayout from '@/components/BaseLayout.vue'
+    import { mapGetters, mapActions } from 'vuex'
+
   export default {
     components: {
-      'head-bar': HeadBar
+      'base-layout': BaseLayout,
+    },
+    computed: {
+      ...mapGetters(['user']),
     },
     methods: {
       call(){

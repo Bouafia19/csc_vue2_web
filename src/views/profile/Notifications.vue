@@ -1,6 +1,7 @@
 <template>
   <div>
-    <head-bar pageTitle="notifications">
+    <!-- <head-bar pageTitle="notifications"> -->
+      <base-layout :user="user">
       <div v-if="!announcements">
         <v-row 
           class="d-flex justify-center align-center"  
@@ -68,23 +69,23 @@
         </div>
       </div>
       
-     
-    </head-bar>
+      </base-layout>
+    <!-- </head-bar> -->
 </div>
 </template>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'
-    import HeadBar from '@/components/HeadBar.vue'
+    import BaseLayout from '@/components/BaseLayout.vue'
     export default {
         components: {
-            'head-bar': HeadBar
+            'base-layout': BaseLayout,
         },
         data: () => ({ 
             reveal: false,
         }),
         computed: {
-            ...mapGetters(['announcements'])
+            ...mapGetters(['announcements', 'user'])
         },
         methods: {
           ...mapActions(['fetchAnnouncements']),

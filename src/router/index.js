@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/tabs',
+    redirect: '/map',
   },
   {
     path: '/home',

@@ -1,4 +1,5 @@
 <template>
+  <base-layout :user="user">
   <v-container
     class="fill-height"
   >
@@ -20,11 +21,17 @@
       </v-row>
     </v-fade-transition>
   </v-container>
+  </base-layout>
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
+  import BaseLayout from '@/components/BaseLayout.vue'
  
 export default {
+    components: {
+      'base-layout': BaseLayout,
+    },
     data: () => ({
       items: [
         {
@@ -79,7 +86,7 @@ export default {
      
     }),
     computed: {
-  
+       ...mapGetters(['user']),
     },
    
 

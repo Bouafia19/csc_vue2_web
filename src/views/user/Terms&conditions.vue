@@ -1,6 +1,7 @@
 <template>
     <div>
-        <head-bar pageTitle="termsConditions">
+        <!-- <head-bar pageTitle="termsConditions"> -->
+        <base-layout :user="user">
         <v-container class="mt-2" fluid >
             <div class="text-center" v-if="loadingTerms">
                 <v-row 
@@ -63,17 +64,18 @@
                 
             </div>
         </v-container>
-        </head-bar>  
+        </base-layout>
+        <!-- </head-bar>   -->
     </div>
 </template>
 
 <script>
-    import HeadBar from '@/components/HeadBar.vue'
+    import BaseLayout from '@/components/BaseLayout.vue'
     import { mapGetters, mapActions } from 'vuex'
 
     export default {
         components: {
-            'head-bar': HeadBar
+            'base-layout': BaseLayout,
         },
         data: () => ({
             progress: 75,
@@ -82,7 +84,7 @@
             title: ''
         }),
         computed: {
-            ...mapGetters(['terms', 'loadingTerms']),
+            ...mapGetters(['terms', 'loadingTerms', 'user']),
             sortByTitle() {
                 return this.terms
             }

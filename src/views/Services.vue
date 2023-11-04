@@ -1,6 +1,7 @@
 <template>
   <div>
-    <head-bar pageTitle="services">
+    <!-- <head-bar pageTitle="services"> -->
+      <base-layout :user="user">
     <v-container fluid>
       <div v-if="!allServices">
         <v-row 
@@ -54,7 +55,8 @@
       </div>
       </div>
     </v-container>
-    </head-bar>
+      </base-layout>
+    <!-- </head-bar> -->
   </div>
 </template>
 
@@ -63,10 +65,12 @@
   import moment from 'moment'
   import { mapGetters, mapActions } from 'vuex'
   import HeadBar from '@/components/HeadBar.vue'
+  import BaseLayout from '@/components/BaseLayout.vue'
 
   export default {
     components: {
-      'head-bar': HeadBar
+      'head-bar': HeadBar,
+      'base-layout': BaseLayout,
     },
     data: () => ({
       selectedItem: 1,

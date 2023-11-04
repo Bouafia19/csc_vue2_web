@@ -71,10 +71,10 @@
           <v-btn
               v-for="(i, index) in footerItems"
               :key="index"
-              
               :value="i.to"
               class="ma-2"
               text
+              :to="i.to"
               
           >
               {{ i.title }}
@@ -138,7 +138,7 @@ export default {
       { title: "search", icon: 'mdi-magnify', to: '/search' },
       { title: "post", icon: 'mdi-plus', to: '/addPub' },
       { title: "inbox", icon: 'mdi-message-processing-outline', to: '/inbox' },
-      { title: "profile", icon: 'mdi-account', to: '/profile' },
+      { title: "profile", icon: 'mdi-account', to: '/updateProfile' }
     ],
     tab: null,
     value: '',

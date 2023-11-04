@@ -65,7 +65,7 @@
 
               <inbox v-if="route === '/inbox'"/>
               
-              <profile v-if="route === '/profile'" :user="user">Profile</profile>
+              <profile v-if="route === '/updateProfile'" :user="user">Profile</profile>
             </template>
           </base-layout>
         </div>
@@ -78,7 +78,7 @@
   import BaseLayout from '@/components/BaseLayout.vue'
   import AddPub from './addPub.vue'
   import Search from './Search.vue'
-  import Profile from './Profile.vue'
+  import Profile from './UpdateProfile.vue'
   import Inbox from './Inbox.vue'
   import { mapGetters, mapActions } from 'vuex'
   import Map from './Map.vue'

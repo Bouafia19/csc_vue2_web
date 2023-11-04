@@ -1,6 +1,7 @@
 <template>
     <div>
-        <head-bar pageTitle="service">
+        <!-- <head-bar pageTitle="service"> -->
+        <base-layout :user="user">
             <v-container
                 fluid
                 v-if="service"
@@ -82,7 +83,8 @@
                         </v-radio-group>
                 </div>
             </v-container>
-        </head-bar>
+        </base-layout>
+        <!-- </head-bar> -->
     </div>
 </template>
 
@@ -90,10 +92,11 @@
     import HeadBar from '@/components/HeadBar.vue'
     import { mapGetters, mapActions } from 'vuex'
     import NewBilling from '@/components/NewBilling.vue'
+    import BaseLayout from '@/components/BaseLayout.vue'
 
     export default {
         components: {
-            'head-bar': HeadBar,
+            'base-layout': BaseLayout,
             'new-billing': NewBilling
         },
         data: () => ({
@@ -111,9 +114,9 @@
                 { "title": "1 an", value: 12 }
             ]
         }),
-        // computed: {
-        //     ...mapGetters(['service']),
-        // },
+        computed: {
+            ...mapGetters(['user']),
+        },
         methods: {
             ...mapActions([]),
             newBilling(){

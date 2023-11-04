@@ -1,5 +1,6 @@
 <template>
   <div>
+    <base-layout :user="user">
     <v-container>
       <v-sheet
         class="mx-auto my-2"
@@ -89,13 +90,18 @@
       
 
     </v-container>
-
+  </base-layout>
   </div>
 </template>
 
 <script>
- 
+  import { mapGetters, mapActions } from 'vuex'
+  import BaseLayout from '@/components/BaseLayout.vue'
+
   export default {
+    components: {
+      'base-layout': BaseLayout,
+    },
     data: () => ({
       sheet: false,
       err: '',
@@ -110,14 +116,19 @@
       ]
     }),
 
+    computed: {
+       ...mapGetters(['user']),
+    },
+
     methods:{
+      ...mapActions(['fetchUser']),
       goToService(e){
         console.log('e', e)
       },
     },
       
     mounted(){
-     
+     this.fetchUser()
         
     }
   

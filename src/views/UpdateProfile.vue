@@ -1,12 +1,17 @@
 <template>
     <div>
-        <head-bar pageTitle="profileUpdate">
+        <!-- <head-bar pageTitle="profileUpdate"> -->
+        <base-layout :user="user">
         <v-container fluid >
             <v-row
                 class="d-flex justify-center align-center"
                 style="height: 90vh;"
             >
-                <v-col>
+                <v-col
+                    cols="12"
+                    sm="6"
+                    md="4"
+                >
                     
                 <validation-observer
                     ref="observer"
@@ -156,7 +161,8 @@
                 </v-col>
             </v-row>
         </v-container>
-        </head-bar>
+        <!-- </head-bar> -->
+        </base-layout>
     </div>
 </template>
 
@@ -167,6 +173,7 @@
     import UseCamera from '@/components/UseCamera.vue'
     import { required, digits, email, max, regex, confirmed } from 'vee-validate/dist/rules'
     import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
+    import BaseLayout from '@/components/BaseLayout.vue'
 
     setInteractionMode('eager')
 
@@ -204,7 +211,8 @@
             ValidationProvider,
             ValidationObserver,
             'locale-changer': LocaleChanger,
-            UseCamera
+            UseCamera,
+            'base-layout': BaseLayout
         },
         data: () => ({
             password: '',

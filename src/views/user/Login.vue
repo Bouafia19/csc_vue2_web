@@ -3,14 +3,12 @@
     <head-bar pageTitle="Login">
     <v-container
       fluid
-    
     >
       <v-row 
         class="d-flex justify-center align-center"
         style="height: 90vh;"
       >
         <v-col 
-          
           cols="12"
           sm="6"
           md="4"

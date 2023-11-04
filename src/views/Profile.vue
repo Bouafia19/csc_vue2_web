@@ -1,5 +1,6 @@
 <template>
 <div>
+  <base-layout :user="user">
   <v-list >
           <v-list-item @click="$router.push({ path: `/updateProfile`  })">
             <v-list-item-avatar tile size="60" color="white">
@@ -65,6 +66,7 @@
         
 
       </v-list>
+  </base-layout>
 </div>
 </template>
 
@@ -72,8 +74,11 @@
   import { mapGetters, mapActions } from 'vuex'
 
   export default {
-    props: ['user'],
+    // props: ['user'],
     data: () => ({
+      components: {
+        'base-layout': BaseLayout,
+      },
         items: [
             {title: 'notifications', icon: 'mdi-bell-ring', color: 'primary', action: 'getNotifications', to: '/notification'},
             // {title: 'wallet', icon: 'mdi-wallet', color: 'primary', action: 'getWallet', to: '/wallet'},
@@ -85,8 +90,13 @@
         err: '',
         photo: null
     }),
+
+    computed: {
+       ...mapGetters(['user']),
+    },
+
     methods: {
-      ...mapActions(['auth/account_sign_out']),
+      ...mapActions(['auth/account_sign_out', 'fetchUser']),
       getTermsConditionsPage(){
         this.$router.push({ path: `/terms&conditions`  });
       },
@@ -136,6 +146,7 @@
   },
 
   mounted(){
+    this.fetchUser()
   }
 }
 </script>

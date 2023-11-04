@@ -1,4 +1,5 @@
 <template>
+  <base-layout :user="user">
     <v-list two-line>
       <v-subheader>Inbox</v-subheader>
       <v-list-item-group
@@ -46,10 +47,16 @@
         </template>
       </v-list-item-group>
     </v-list>
+  </base-layout>
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
+  import BaseLayout from '@/components/BaseLayout.vue'
   export default {
+    components: {
+      'base-layout': BaseLayout,
+    },
     data: () => ({
       selected: [2],
       items: [
@@ -115,6 +122,11 @@
         },
       ],
     }),
+
+    computed: {
+       ...mapGetters(['user']),
+    },
+    
   }
 </script>
 
