@@ -23,7 +23,7 @@ const mutations = {
 
 const actions = {
     async setLSUserInfo({}, data){
-        localStorage.setItem('userInfo', JSON.stringify(data))
+        localStorage.setItem('userInfo', data)
     },
     async getLSUserInfo(){
         const value = JSON.parse(localStorage.getItem('userInfo'))

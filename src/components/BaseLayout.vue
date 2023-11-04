@@ -62,6 +62,25 @@
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
           CSC
         </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn-toggle 
+          v-model="value"
+          background-color="next"
+          borderless
+        >
+          <v-btn
+              v-for="(i, index) in footerItems"
+              :key="index"
+              
+              :value="i.to"
+              class="ma-2"
+              text
+              
+          >
+              {{ i.title }}
+          </v-btn>
+        </v-btn-toggle>
+       
     </v-app-bar>
 
     <v-sheet id="main" style="overflow: auto">
@@ -75,6 +94,7 @@
       padless
       class="white rounded-lg rounded-b-0"
       dark
+      v-show="false"
     >
       <v-bottom-navigation 
         grow 

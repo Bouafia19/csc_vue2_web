@@ -3,14 +3,35 @@ import router from '../../router'
 
 const state = {
     allServices: undefined,
-    user: undefined
+    user: undefined,
+    getServices: undefined,
 }
 
 const getters = {
-    allServices: (state) => state.allServices
+    allServices: (state) => state.allServices,
+    getServices: (state) => state.getServices
 }
 
 const actions = {
+    async getAllServices({ dispatch, commit }){
+        // dispatch('auth/getLSUserInfo').then(async (ls) => {
+            let params = {
+                typeAccount: "client"
+            }
+            try {
+                const response = await axios.get(`api/services`,{
+                    // headers: {
+                    //     'Authorization': `Bearer ${ls.token}`
+                    // }
+                })
+                if(response.status === 200){
+                    commit('getServices', response.data)
+                }
+            } catch (error) {
+                throw new Error(`${error}`)
+            }
+        // })
+    },
     //fetch single Trip
     async fetchServices({ dispatch, commit }){
         dispatch('auth/getLSUserInfo').then(async (ls) => {
@@ -172,6 +193,7 @@ const mutations = {
                 }
             })
     }),
+    getServices: (state, getServices) => (state.getServices = getServices),
     finishedServices: (state, finishedServices) => (state.finishedServices = finishedServices.filter((item) => item.finished)),
     plannedServices: (state, plannedServices) => (state.plannedServices = plannedServices.filter((item) => 'start' in item && Date.parse(item.start) > Date.parse(new Date()) && item.status === 'planned')).forEach(element => {
             element.start = element.start.substr(0, 19)

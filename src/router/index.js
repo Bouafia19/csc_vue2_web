@@ -108,7 +108,7 @@ const routes = [
     path: '/serviceDetail',
     name: 'ServiceDetail',
     component: () => import('@/views/ServiceDetail.vue'),
-    meta: { requiresAuth: true }
+    // meta: { requiresAuth: true }
   },
   {
     path: '/search',
@@ -127,6 +127,16 @@ const routes = [
     name: 'AddPub',
     component: () => import('@/views/addPub.vue'),
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/views/site/Contact.vue')
+  },
+  {
+    path: '/servicessite',
+    name: 'ServicesSite',
+    component: () => import('@/views/site/Services.vue')
   },
 ]
 

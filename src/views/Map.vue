@@ -33,19 +33,19 @@
           v-model="model"
         >
           <v-slide-item
-            v-for="n in 5"
+            v-for="n in 15"
             :key="n"
             v-slot="{ active, toggle }"
           >
             <v-card
               :color="active ? 'primary' : ''"
               class="ma-1"
-              height="180"
-              width="190"
+              height="250"
+              width="350"
               @click="toggle"
               flat
             >
-              <video width="100%" height="100" controls>
+              <video width="100%" height="250" controls>
                 <source src="https://www.youtube.com/watch?v=_o55tDIs-fE&ab_channel=KnowledgeBase" type="video/mp4">
                 Your browser does not support HTML video.
               </video>
