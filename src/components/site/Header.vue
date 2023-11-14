@@ -59,10 +59,38 @@
             scroll-target="#main"
         >
             <v-toolbar-title class="mx-12">
-                <!-- <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon> -->
+                <v-avatar class="mr-4">
+                    <v-img           
+                    contain
+                    src="@/assets/csc-icon.png"
+                    alt="img"
+                    >
+                    </v-img>
+                    
+                </v-avatar>
                 CSC
             </v-toolbar-title>
-        
+            <!-- <v-list color="next">
+                <v-list-item class="px-2">
+                <v-list-item-avatar tile>
+                    <v-img           
+                    contain
+                    src="@/assets/csc-icon.png"
+                    alt="img"
+                    >
+                    </v-img>
+                </v-list-item-avatar>
+
+                <v-list-item-content>
+                    <v-list-item-title class="text-h6">
+                    {{ 'CSC' }} 
+                    </v-list-item-title>
+                </v-list-item-content>
+                </v-list-item>
+            </v-list> -->
+
+            <v-spacer></v-spacer>
+
             <v-btn
                 v-for="(i, index) in navigationItems"
                 :key="index"
@@ -73,7 +101,7 @@
                 {{ i.name }}
             </v-btn>
 
-            <v-spacer></v-spacer>
+            
 
             <v-btn text>
                 <locale-changer />
