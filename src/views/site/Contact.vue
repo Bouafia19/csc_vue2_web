@@ -1,8 +1,8 @@
 <template>
   <div>
-    <site-header>
-    <v-container>
-    <h1 class="text-center ma-4" color="next">Nous Contacter</h1>
+    <!-- <site-header> -->
+    <!-- <v-container> -->
+    <h1 class="text-center ma-4 next white--text">Nous Contacter</h1>
     <v-row>
       <v-col>
         <v-img style="height: 100%">
@@ -24,11 +24,11 @@
               <validation-provider
                 v-slot="{ errors }"
                 name="Name"
-                rules="required|max:10"
+                rules="required|max:30"
               >
                 <v-text-field
                   v-model="name"
-                  :counter="10"
+                  :counter="30"
                   :error-messages="errors"
                   label="Name"
                   required
@@ -42,13 +42,13 @@
                 name="phoneNumber"
                 :rules="{
                   required: true,
-                  digits: 7,
-                  regex: '^(71|72|74|76|81|82|84|85|86|87|88|89)\\d{5}$'
+                  digits: 10,
+                
                 }"
               >
                 <v-text-field
                   v-model="phoneNumber"
-                  :counter="7"
+                  :counter="10"
                   :error-messages="errors"
                   label="Phone Number"
                   required
@@ -93,7 +93,7 @@
                 :disabled="invalid"
                 color="next"
                 rounded
-                
+                dark
               >
                 submit
               </v-btn>
@@ -103,9 +103,9 @@
         </v-container>
       </v-col>
     </v-row>
-    </v-container>
+    <!-- </v-container> -->
   <!-- <site-footer /> -->
-    </site-header>
+    <!-- </site-header> -->
   </div>
 </template>
 

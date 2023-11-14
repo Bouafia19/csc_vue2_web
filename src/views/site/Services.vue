@@ -1,10 +1,12 @@
 <template>
   <div>
-    <site-header
+    <!-- <site-header
       ref="authCsc" 
-    >
-    <v-container fluid>
-      <h1 class="text-center ma-4" color="next">Nos SERVICE</h1>
+    > -->
+    <v-container>
+
+      <h1 class="text-center ma-4 next white--text">Nos SERVICE</h1>
+
       <div v-if="!getServices">
         <v-row 
           class="d-flex justify-center align-center"  
@@ -16,48 +18,62 @@
           ></v-progress-circular>
         </v-row>
       </div>
+
       <div v-else>
-         <div v-if="getServices.length === 0" class="text-center ma-2">
-        <v-alert
-          outlined
-          color="info"
-        >
-          <div class="text-h6">
-            {{ $t('noRecords')}}
-          </div>
-        </v-alert>
+          <div v-if="getServices.length === 0" class="text-center ma-2">
+            <v-alert
+              outlined
+              color="info"
+            >
+              <div class="text-h6">
+                {{ $t('noRecords')}}
+              </div>
+            </v-alert>
       </div>
         
       <div v-else-if="getServices.length > 0">
-      <v-list dense>
-      <!-- <v-subheader>SERVICES</v-subheader> -->
-      <v-list-item-group
-        v-model="selectedItem"
-        color="primary"
-      >
-        <v-list-item
-          v-for="(item, i) in getServices"
-          :key="i"
-          @click="getService(item)"
+        <v-row>
+        <v-col 
+          v-for="(n, index) in getServices" 
+          :key="index" 
+          cols="6" 
+          :class="index % 2 ? 'd-flex justify-start' : 'd-flex justify-end'"
         >
-          
-            <v-list-item-icon v-if="!item.done">
-              <v-icon>mdi-table-of-contents</v-icon>
-            </v-list-item-icon>
-            <v-list-item-icon v-else>
-              <v-icon color="next">mdi-checkbox-marked-circle</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.name }}</v-list-item-title>
-            </v-list-item-content>
-         
-        </v-list-item>
-      </v-list-item-group>
-    </v-list>
+          <v-card
+            height="200"
+            width="500"
+            outlined
+          >
+            <v-list-item three-line>
+              <v-list-item-content>
+                <!-- <div class="text-overline mb-4">
+                  
+                </div> -->
+                <v-list-item-title class="text-h5 mb-1">
+                  {{ n.name }}
+                </v-list-item-title>
+                <v-list-item-subtitle>{{ n.description }}</v-list-item-subtitle>
+              </v-list-item-content>
+
+              <v-list-item-avatar
+                tile
+                size="150"
+               
+
+              >
+                <v-img           
+                  contain
+                  :src="n.photo"
+                >
+                  </v-img>
+              </v-list-item-avatar>
+            </v-list-item>
+          </v-card>
+        </v-col>
+      </v-row>
       </div>
       </div>
     </v-container>
-    </site-header>
   </div>
 </template>
 

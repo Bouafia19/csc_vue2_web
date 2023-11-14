@@ -1,8 +1,11 @@
 <template>
     <v-footer
-        absolute
+        
         padless
+        class="white rounded-lg rounded-b-0"
         dark
+       
+
     >
         <v-card
         flat

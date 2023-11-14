@@ -68,7 +68,7 @@
                 :key="index"
                 class="ma-2"
                 text
-                :to="i.to"
+                @click="goToSection(i.to)"
             >
                 {{ i.name }}
             </v-btn>
@@ -94,13 +94,11 @@
             </v-main>
         </v-sheet>
 
-        <v-footer
+        <!-- <v-footer
             app
             padless
             class="white rounded-lg rounded-b-0"
             dark
-            fixed
-
         >
             <v-card
                 flat
@@ -130,7 +128,7 @@
                     {{ new Date().getFullYear() }} — <strong>CSC</strong>
                 </v-card-text>
             </v-card>
-        </v-footer>
+        </v-footer> -->
 
         <v-dialog v-model="dialog" max-width="700px">
             <v-card>
@@ -203,9 +201,10 @@
 
         data: () => ({ 
             navigationItems: [
-                { name: 'Home', to: '/home'},
-                { name: 'Services', to: '/servicessite'},
-                { name: 'Contact', to: '/contact'},
+                { name: 'Home', to: 'home'},
+                { name: 'Services', to: 'servicessite'},
+                { name: 'Contents', to: 'contentssite'},
+                { name: 'Contact', to: 'contact'},
             ],
             dialog: false,
             drawer: null,
@@ -234,6 +233,11 @@
 
             routerSignup () {
                 this.$router.push('/signup')
+            },
+
+            goToSection(to){
+                const el = document.getElementById(to)
+                el.scrollIntoView({behavior: "smooth"})
             }
    
         }

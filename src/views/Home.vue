@@ -1,8 +1,18 @@
 <template>
-<div>
-    <site-header >
+  <div>
+    <site-header 
+      id="home"
+    >
 
-    <v-container>
+    <v-img
+    
+      src="@/assets/csc.png"
+    ></v-img>
+    
+    <site-services id="servicessite"/>
+
+    <v-container id="contentssite">
+      <h1 class="text-center ma-4 next white--text">Nous Contents</h1>
       <v-sheet
         class="mx-auto my-2"
         max-width="100%"
@@ -16,7 +26,7 @@
           <v-col>
             <h3>{{ i.title }}</h3>
           </v-col>
-          <v-col class="d-flex justify-end">
+          <!-- <v-col class="d-flex justify-end">
             <v-btn
               x-small
               dense
@@ -28,7 +38,7 @@
               tout afficher
             </v-btn>
 
-          </v-col>
+          </v-col> -->
           
         </v-row>
         
@@ -36,8 +46,8 @@
           v-model="model"
         >
           <v-slide-item
-            v-for="n in 15"
-            :key="n"
+            v-for="(n, v) in i.videos"
+            :key="v"
             v-slot="{ active, toggle }"
           >
             <v-card
@@ -49,11 +59,11 @@
               flat
             >
               <video width="100%" height="250" controls>
-                <source src="https://www.youtube.com/watch?v=_o55tDIs-fE&ab_channel=KnowledgeBase" type="video/mp4">
+                <source :src="n.url" type="video/mp4">
                 Your browser does not support HTML video.
               </video>
 
-              <v-card-subtitle class="pa-1 font-weight-black">Cafe Badilico</v-card-subtitle>
+              <v-card-subtitle class="pa-1 font-weight-black">{{ n.title }}</v-card-subtitle>
 
               <v-card-text width="100%" class="pa-1">
                 <v-row
@@ -89,31 +99,69 @@
         ></v-divider>
       </v-sheet>
 
+      <site-contact id="contact" />
       
 
     </v-container>
 
-    <!-- <site-footer /> -->
+    <site-footer />
     </site-header>
+    
+
 </div>
 </template>
 
 <script>
   import Footer from '@/components/site/Footer.vue'
   import Header from '@/components/site/Header.vue'
+  import Contact from '@/views/site/Contact.vue'
+  import Services from '@/views/site/Services.vue'
 
   export default ({
     components: {
-      'site-footer': Footer,
       'site-header': Header,
+      'site-footer': Footer,
+      'site-contact': Contact,
+      'site-services': Services 
     },
 
     data: () => ({ 
       items: [
-        { title: "Introduction videos", divider: true },
-        { title: "Bodcasts", divider: true },
-        { title: "Announcements", divider: true },
-        { title: "advertising", divider: false }
+        { title: "Introduction videos", divider: true, 
+          videos: [
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" },
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" },
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" },
+            { title: "by", url: "podcast2.mp4" }
+          ]
+        },
+        { title: "Bodcasts", divider: true,
+          videos: [
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" }
+          ]
+        },
+        { title: "Announcements", divider: true,
+          videos: [
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" }
+          ] 
+        },
+        { title: "advertising", divider: false,
+          videos: [
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" }
+          ] 
+        }
       ],
        model: null,
      
