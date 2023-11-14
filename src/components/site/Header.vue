@@ -59,7 +59,7 @@
             scroll-target="#main"
         >
             <v-toolbar-title class="mx-12">
-                <v-avatar class="mr-4">
+                <v-avatar class="mr-4" color="white">
                     <v-img           
                     contain
                     src="@/assets/csc-icon.png"
