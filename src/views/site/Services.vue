@@ -49,7 +49,7 @@
                 <!-- <div class="text-overline mb-4">
                   
                 </div> -->
-                <v-list-item-title class="text-h5 mb-1">
+                <v-list-item-title class="text-wrap text-h5 mb-1">
                   {{ n.name }}
                 </v-list-item-title>
                 <v-list-item-subtitle>{{ n.description }}</v-list-item-subtitle>

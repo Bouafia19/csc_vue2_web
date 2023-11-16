@@ -8,8 +8,18 @@
     
       src="@/assets/csc.png"
     ></v-img>
+
+    <v-container id="about">
+      <h1 class="text-center ma-4 next white--text">About Us</h1>
+      <p>CSC Foundation covers everything related to the field of marketing, public relations, investment and project management, and there are distinguished works and services that you can benefit from with CSC.</p>
+    </v-container>
     
     <site-services id="servicessite"/>
+
+    <div class="text-center ma-4 next white--text" style="height: 200px">
+      <h1>Why choose us ?</h1>
+      <p>we are the best</p>
+    </div>
 
     <v-container id="contentssite">
       <h1 class="text-center ma-4 next white--text">Nous Contents</h1>
@@ -129,16 +139,16 @@
       items: [
         { title: "Introduction videos", divider: true, 
           videos: [
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" },
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" },
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" },
-            { title: "by", url: "podcast2.mp4" }
+            { title: "hi", url: "introduction.mp4" },
+            { title: "hello", url: "introduction1.mp4" },
+            { title: "by", url: "introduction2.mp4" },
+            { title: "hi", url: "introduction.mp4" },
+            { title: "hello", url: "introduction1.mp4" },
+            { title: "by", url: "introduction2.mp4" },
+            { title: "hi", url: "introduction.mp4" },
+            { title: "hello", url: "introduction1.mp4" },
+            { title: "by", url: "introduction2.mp4" },
+            { title: "by", url: "introduction2.mp4" }
           ]
         },
         { title: "Bodcasts", divider: true,
