@@ -5,7 +5,8 @@
     >
 
     <v-img
-    
+      contain
+  aspect-ratio
       src="@/assets/csc.png"
     ></v-img>
 
@@ -153,6 +154,12 @@
         },
         { title: "Bodcasts", divider: true,
           videos: [
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" },
+            { title: "hi", url: "podcast.mp4" },
+            { title: "hello", url: "podcast1.mp4" },
+            { title: "by", url: "podcast2.mp4" },
             { title: "hi", url: "podcast.mp4" },
             { title: "hello", url: "podcast1.mp4" },
             { title: "by", url: "podcast2.mp4" }
