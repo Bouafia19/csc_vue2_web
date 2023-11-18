@@ -5,7 +5,7 @@
     > -->
     <v-container>
 
-      <h1 class="text-center ma-4 next white--text">Nos SERVICE</h1>
+      <h1 class="text-center ma-4 next white--text">{{ $t('Services') }}</h1>
 
       <div v-if="!getServices">
         <v-row 
@@ -43,16 +43,23 @@
             height="200"
             width="500"
             outlined
+            @click="getService(n)"
           >
             <v-list-item three-line>
-              <v-list-item-content>
-                <!-- <div class="text-overline mb-4">
-                  
-                </div> -->
+              <v-list-item-content v-show="$i18n.locale != 'ar'">
+                
                 <v-list-item-title class="text-wrap text-h5 mb-1">
                   {{ n.name }}
                 </v-list-item-title>
                 <v-list-item-subtitle>{{ n.description }}</v-list-item-subtitle>
+              </v-list-item-content>
+
+              <v-list-item-content v-show="$i18n.locale == 'ar'">
+               
+                <v-list-item-title class="text-wrap text-h5 mb-1" >
+                  {{ n.nameAr }}
+                </v-list-item-title>
+                <v-list-item-subtitle>{{ n.descriptionAr }}</v-list-item-subtitle>
               </v-list-item-content>
 
               <v-list-item-avatar
@@ -102,7 +109,8 @@
     methods: {
       ...mapActions(['getAllServices']),
       getService(e){
-        this.$refs.authCsc.dialog = true
+        this.$emit('loadDialog')
+        // this.$refs.authCsc.dialog = true
         // console.log(e)
         // this.$router.push({ name: 'ServiceDetail', params: { item: e }})
 

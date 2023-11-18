@@ -28,7 +28,7 @@
         
       <div v-else-if="allServices.length > 0">
       <v-list dense>
-      <v-subheader>SERVICES</v-subheader>
+      <v-subheader>{{ $t('Services') }}</v-subheader>
       <v-list-item-group
         v-model="selectedItem"
         color="primary"

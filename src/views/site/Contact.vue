@@ -2,7 +2,7 @@
   <div>
     <!-- <site-header> -->
     <!-- <v-container> -->
-    <h1 class="text-center ma-4 next white--text">Nous Contacter</h1>
+    <h1 class="text-center ma-4 next white--text">{{ $t('Contact') }}</h1>
     <v-row>
       <v-col>
         <v-img style="height: 100%">
@@ -30,7 +30,7 @@
                   v-model="name"
                   :counter="30"
                   :error-messages="errors"
-                  label="Name"
+                  :label="$t('firstName') + ' ' + $t('lastName')"
                   required
                   outlined
                   rounded
@@ -50,7 +50,7 @@
                   v-model="phoneNumber"
                   :counter="10"
                   :error-messages="errors"
-                  label="Phone Number"
+                  :label="$t('phoneNumber')"
                   required
                   outlined
                   rounded
@@ -65,7 +65,7 @@
                 <v-text-field
                   v-model="email"
                   :error-messages="errors"
-                  label="E-mail"
+                  :label="$t('email')"
                   required
                   outlined
                   rounded
@@ -81,7 +81,7 @@
                   :error-messages="errors"
                   outlined
                   name="description"
-                  label="Description"
+                  :label="$t('Description')"
                   v-model="description"
                   rounded
                 ></v-textarea>

@@ -2,28 +2,46 @@
   <div>
     <site-header 
       id="home"
+      ref="authCsc"
     >
 
     <v-img
       contain
-  aspect-ratio
+      aspect-ratio
       src="@/assets/csc.png"
+      v-show="this.$i18n.locale == 'en'"
     ></v-img>
 
-    <v-container id="about">
-      <h1 class="text-center ma-4 next white--text">About Us</h1>
-      <p>CSC Foundation covers everything related to the field of marketing, public relations, investment and project management, and there are distinguished works and services that you can benefit from with CSC.</p>
-    </v-container>
+    <v-img
+      contain
+      aspect-ratio
+      src="@/assets/cscFR.png"
+      v-show="this.$i18n.locale == 'fr'"
+    ></v-img>
+
+    <v-img
+      contain
+      aspect-ratio
+      src="@/assets/cscAR.png"
+      v-show="this.$i18n.locale == 'ar'"
+    ></v-img>
+
+    <div id="about">
+      <h1 class="text-center ma-4 next white--text">{{ $t('AboutUs') }}</h1>
+      <v-container>
+        <p class="text-justify">{{ $t('cscP') }}</p>
+      </v-container>
+    </div>
     
-    <site-services id="servicessite"/>
+    <site-services id="servicessite" v-on:loadDialog="dialogLoad()"/>
 
     <div class="text-center ma-4 next white--text" style="height: 200px">
-      <h1>Why choose us ?</h1>
-      <p>we are the best</p>
+      <h1 >{{ $t('Why') }}</h1>
+      <p>{{ $t('We') }}</p>
     </div>
 
     <v-container id="contentssite">
-      <h1 class="text-center ma-4 next white--text">Nous Contents</h1>
+      <h1 class="text-center ma-4 next white--text">{{ $t('Contents') }}</h1>
       <v-sheet
         class="mx-auto my-2"
         max-width="100%"
@@ -35,7 +53,7 @@
           class="d-flex justify-center align-center"
         >
           <v-col>
-            <h3>{{ i.title }}</h3>
+            <h3>{{ $t(i.title) }}</h3>
           </v-col>
           <!-- <v-col class="d-flex justify-end">
             <v-btn
@@ -138,7 +156,7 @@
 
     data: () => ({ 
       items: [
-        { title: "Introduction videos", divider: true, 
+        { title: "IntroVideos", divider: true, 
           videos: [
             { title: "hi", url: "introduction.mp4" },
             { title: "hello", url: "introduction1.mp4" },
@@ -182,6 +200,12 @@
       ],
        model: null,
      
-    })
+    }),
+
+     methods: {
+      dialogLoad() {
+        this.$refs.authCsc.dialog = true
+      },
+    }
   })
 </script>

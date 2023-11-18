@@ -60,5 +60,20 @@ export default {
   price: 'Prix',
   termsConditionsParagraph: 'En continuant, vous acceptez et reconnaissez avoir lu notre',
   total: 'Total',
-  net: 'Net à payer'
+  net: 'Net à payer',
+  csc: 'csc',
+  Home: 'Accueil',
+  Services: 'Services',
+  Contents: 'Contenus',
+  Contact: 'Contactez-nous',
+  AboutUs: 'À propos',
+  cscP: 'Nous sommes une fondation qui couvre tout ce qui touche au domaine du marketing, des relations publiques, de l\'investissement et de la gestion de projets, et il existe des travaux et des services distingués dont vous pouvez bénéficier avec CSC.',
+  Why: 'Pourquoi nous choisir ?',
+  We: 'nous sommes les meilleurs',
+  Description: 'Description',
+  IntroVideos: 'Vidéos d\'introduction',
+  Bodcasts: 'Bodcasts',
+  Announcements: 'Annonces',
+  advertising: 'Publicité'
+
 }

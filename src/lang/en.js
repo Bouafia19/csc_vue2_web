@@ -60,5 +60,19 @@ export default {
   price: 'Price',
   termsConditionsParagraph: 'By continuing, you accept and acknowledge having read our',
   total: 'Total',
-  net: 'Net payable'
+  net: 'Net payable',
+  csc: 'csc',
+  Home: 'Home',
+  Services: 'Services',
+  Contents: 'Contents',
+  Contact: 'Contact',
+  AboutUs: 'About Us',
+  cscP: 'CSC Foundation covers everything related to the field of marketing, public relations, investment and project management, and there are distinguished works and services that you can benefit from with CSC.',
+  Why: 'Why choose us ?',
+  We: 'we are the best',
+  Description: 'Description',
+  IntroVideos: 'Introduction videos',
+  Bodcasts: 'Bodcasts',
+  Announcements: 'Announcements',
+  advertising: 'advertising'
 }
