@@ -40,8 +40,9 @@
       <p>{{ $t('We') }}</p>
     </div>
 
-    <v-container id="contentssite">
+    <div id="contentssite">
       <h1 class="text-center ma-4 next white--text">{{ $t('Contents') }}</h1>
+      <v-container>
       <v-sheet
         class="mx-auto my-2"
         max-width="100%"
@@ -126,12 +127,13 @@
           v-if="i.divider"
           class="my-4"
         ></v-divider>
+      
       </v-sheet>
-
+      </v-container>
       <site-contact id="contact" />
       
 
-    </v-container>
+    </div>
 
     <site-footer />
     </site-header>
@@ -185,16 +187,21 @@
         },
         { title: "Announcements", divider: true,
           videos: [
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" }
+            { title: "hi", url: "recrut.mp4" },
+            { title: "hello", url: "recrut1.mp4" },
+            { title: "by", url: "recrut.mp4" },
+            { title: "hello", url: "recrut1.mp4" },
+            { title: "hello", url: "recrut.mp4" }
           ] 
         },
         { title: "advertising", divider: false,
           videos: [
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" }
+            { title: "hi", url: "pub.mp4" },
+            { title: "hello", url: "pub.mp4" },
+            { title: "by", url: "pub.mp4" },
+            { title: "hi", url: "pub.mp4" },
+            { title: "hello", url: "pub.mp4" },
+            { title: "by", url: "pub.mp4" }
           ] 
         }
       ],

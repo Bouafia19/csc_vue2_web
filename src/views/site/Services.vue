@@ -3,7 +3,7 @@
     <!-- <site-header
       ref="authCsc" 
     > -->
-    <v-container>
+    <!-- <v-container> -->
 
       <h1 class="text-center ma-4 next white--text">{{ $t('Services') }}</h1>
 
@@ -48,10 +48,10 @@
             <v-list-item three-line>
               <v-list-item-content v-show="$i18n.locale != 'ar'">
                 
-                <v-list-item-title class="text-wrap text-h5 mb-1">
+                <v-list-item-title class="text-wrap text-justify text-h5 mb-1">
                   {{ n.name }}
                 </v-list-item-title>
-                <v-list-item-subtitle>{{ n.description }}</v-list-item-subtitle>
+                <v-list-item-subtitle class="text-justify">{{ n.description }}</v-list-item-subtitle>
               </v-list-item-content>
 
               <v-list-item-content v-show="$i18n.locale == 'ar'">
@@ -80,7 +80,7 @@
       </v-row>
       </div>
       </div>
-    </v-container>
+    <!-- </v-container> -->
   </div>
 </template>
 

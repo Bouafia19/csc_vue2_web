@@ -1,8 +1,9 @@
 <template>
   <div>
     <!-- <site-header> -->
-    <!-- <v-container> -->
+    <!--  -->
     <h1 class="text-center ma-4 next white--text">{{ $t('Contact') }}</h1>
+    <v-container>
     <v-row>
       <v-col>
         <v-img style="height: 100%">
@@ -103,7 +104,7 @@
         </v-container>
       </v-col>
     </v-row>
-    <!-- </v-container> -->
+    </v-container>
   <!-- <site-footer /> -->
     <!-- </site-header> -->
   </div>
