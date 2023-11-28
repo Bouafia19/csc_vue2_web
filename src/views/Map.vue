@@ -34,24 +34,21 @@
           v-model="model"
         >
           <v-slide-item
-            v-for="n in 15"
-            :key="n"
-            v-slot="{ active, toggle }"
+            v-for="(n, v) in i.videos"
+            :key="v"
           >
             <v-card
-              :color="active ? 'primary' : ''"
               class="ma-1"
               height="250"
               width="350"
-              @click="toggle"
               flat
             >
               <video width="100%" height="250" controls>
-                <source src="https://www.youtube.com/watch?v=_o55tDIs-fE&ab_channel=KnowledgeBase" type="video/mp4">
+                <source :src="n.url" type="video/mp4">
                 Your browser does not support HTML video.
               </video>
 
-              <v-card-subtitle class="pa-1 font-weight-black">Cafe Badilico</v-card-subtitle>
+              <v-card-subtitle class="pa-1 font-weight-black">{{ n.title }}</v-card-subtitle>
 
               <v-card-text width="100%" class="pa-1">
                 <v-row
@@ -109,11 +106,53 @@
       orderInput: true,
       model: null,
       items: [
-        { title: "Introduction videos", divider: true },
-        { title: "Bodcasts", divider: true },
-        { title: "Announcements", divider: true },
-        { title: "advertising", divider: false }
-      ]
+        { title: "IntroVideos", divider: true, 
+          videos: [
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction2.mp4" }
+          ]
+        },
+        { title: "Bodcasts", divider: true,
+          videos: [
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" },
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" },
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" }
+          ]
+        },
+        { title: "Announcements", divider: true,
+          videos: [
+            { title: "Announcement", url: "recrut.mp4" },
+            { title: "Announcement", url: "recrut1.mp4" },
+            { title: "Announcement", url: "recrut.mp4" },
+            { title: "Announcement", url: "recrut1.mp4" },
+            { title: "Announcement", url: "recrut.mp4" }
+          ] 
+        },
+        { title: "advertising", divider: false,
+          videos: [
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" }
+          ] 
+        }
+      ],
     }),
 
     computed: {

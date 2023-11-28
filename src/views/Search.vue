@@ -4,8 +4,14 @@
     class="fill-height"
   >
     <v-fade-transition mode="out-in">
-      <v-row>
-        <v-col>
+      <v-row
+        class="d-flex justify-center align-center"
+      >
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+        >
           <v-card v-for="(i, index) in items" :key="index" class="mb-2">
             <v-img
               src="https://picsum.photos/350/165?random"

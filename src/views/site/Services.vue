@@ -46,12 +46,20 @@
             @click="getService(n)"
           >
             <v-list-item three-line>
-              <v-list-item-content v-show="$i18n.locale != 'ar'">
+              <v-list-item-content v-show="$i18n.locale === 'en'">
                 
                 <v-list-item-title class="text-wrap text-justify text-h5 mb-1">
                   {{ n.name }}
                 </v-list-item-title>
                 <v-list-item-subtitle class="text-justify">{{ n.description }}</v-list-item-subtitle>
+              </v-list-item-content>
+
+              <v-list-item-content v-show="$i18n.locale === 'fr'">
+                
+                <v-list-item-title class="text-wrap text-justify text-h5 mb-1">
+                  {{ n.nameFr }}
+                </v-list-item-title>
+                <v-list-item-subtitle class="text-justify">{{ n.descriptionFr }}</v-list-item-subtitle>
               </v-list-item-content>
 
               <v-list-item-content v-show="$i18n.locale == 'ar'">

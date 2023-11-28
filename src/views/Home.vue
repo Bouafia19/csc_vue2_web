@@ -81,7 +81,7 @@
             v-slot="{ active, toggle }"
           >
             <v-card
-              :color="active ? 'primary' : ''"
+              :color="active ? 'grey' : ''"
               class="ma-1"
               height="250"
               width="350"
@@ -160,48 +160,48 @@
       items: [
         { title: "IntroVideos", divider: true, 
           videos: [
-            { title: "hi", url: "introduction.mp4" },
-            { title: "hello", url: "introduction1.mp4" },
-            { title: "by", url: "introduction2.mp4" },
-            { title: "hi", url: "introduction.mp4" },
-            { title: "hello", url: "introduction1.mp4" },
-            { title: "by", url: "introduction2.mp4" },
-            { title: "hi", url: "introduction.mp4" },
-            { title: "hello", url: "introduction1.mp4" },
-            { title: "by", url: "introduction2.mp4" },
-            { title: "by", url: "introduction2.mp4" }
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction.mp4" },
+            { title: "introduction", url: "introduction1.mp4" },
+            { title: "introduction", url: "introduction2.mp4" },
+            { title: "introduction", url: "introduction2.mp4" }
           ]
         },
         { title: "Bodcasts", divider: true,
           videos: [
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" },
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" },
-            { title: "hi", url: "podcast.mp4" },
-            { title: "hello", url: "podcast1.mp4" },
-            { title: "by", url: "podcast2.mp4" }
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" },
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" },
+            { title: "podcast", url: "podcast.mp4" },
+            { title: "podcast", url: "podcast1.mp4" },
+            { title: "podcast", url: "podcast2.mp4" }
           ]
         },
         { title: "Announcements", divider: true,
           videos: [
-            { title: "hi", url: "recrut.mp4" },
-            { title: "hello", url: "recrut1.mp4" },
-            { title: "by", url: "recrut.mp4" },
-            { title: "hello", url: "recrut1.mp4" },
-            { title: "hello", url: "recrut.mp4" }
+            { title: "Announcement", url: "recrut.mp4" },
+            { title: "Announcement", url: "recrut1.mp4" },
+            { title: "Announcement", url: "recrut.mp4" },
+            { title: "Announcement", url: "recrut1.mp4" },
+            { title: "Announcement", url: "recrut.mp4" }
           ] 
         },
         { title: "advertising", divider: false,
           videos: [
-            { title: "hi", url: "pub.mp4" },
-            { title: "hello", url: "pub.mp4" },
-            { title: "by", url: "pub.mp4" },
-            { title: "hi", url: "pub.mp4" },
-            { title: "hello", url: "pub.mp4" },
-            { title: "by", url: "pub.mp4" }
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" },
+            { title: "advertising", url: "pub.mp4" }
           ] 
         }
       ],
