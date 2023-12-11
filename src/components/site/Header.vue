@@ -160,7 +160,7 @@
 
         <v-dialog v-model="dialog" max-width="700px">
             <v-card>
-                <v-card-title class="text-h5">Auth</v-card-title>
+                <v-card-title class="text-h5">CSC</v-card-title>
 
                 <v-card-text>
                     <v-container>
@@ -210,8 +210,8 @@
 
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="error" text @click="close">Cancel</v-btn>
-                    <v-btn color="success" text @click="close">OK</v-btn>
+                    <v-btn color="error" text @click="close">{{ $t('Cancel') }}</v-btn>
+                    <v-btn color="success" text @click="close">{{ $t('OK') }}</v-btn>
                     <v-spacer></v-spacer>
                 </v-card-actions>
             </v-card>

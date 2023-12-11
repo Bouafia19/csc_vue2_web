@@ -130,9 +130,10 @@
       
       </v-sheet>
       </v-container>
+      <site-quotes />
+      <site-download />
       <site-contact id="contact" />
-      
-
+    
     </div>
 
     <site-footer />
@@ -147,13 +148,18 @@
   import Header from '@/components/site/Header.vue'
   import Contact from '@/views/site/Contact.vue'
   import Services from '@/views/site/Services.vue'
+  import Quotes from '@/views/site/Quotes.vue'
+  import Download from '@/views/site/Download.vue'
+
 
   export default ({
     components: {
       'site-header': Header,
       'site-footer': Footer,
       'site-contact': Contact,
-      'site-services': Services 
+      'site-services': Services,
+      'site-quotes': Quotes, 
+      'site-download': Download, 
     },
 
     data: () => ({ 

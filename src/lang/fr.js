@@ -74,6 +74,17 @@ export default {
   IntroVideos: 'Vidéos d\'introduction',
   Bodcasts: 'Bodcasts',
   Announcements: 'Annonces',
-  advertising: 'Publicité'
+  advertising: 'Publicité',
+  Cancel: 'Annuler',
+  OK: 'D\'accord',
+  q1: 'Vous pouvez trouver les meilleures idées, mais vous aurez besoin de quelqu\'un pour vous aider à transformer ces idées en résultats. Nous ne pouvons atteindre le sommet que si nous travaillons tous ensemble.',
+  q2: 'S\'il lui restait un dollar, elle le dépenserait en relations publiques',
+  q3: 'Vous pouvez apprendre le marketing en une journée, mais vous passerez toute votre vie à le maîtriser',
+  q4: 'Arrêter la publicité pour économiser de l\'argent, c\'est comme arrêter une horloge pour gagner du temps',
+  q5: 'Le marketing est une course sans ligne d\'arrivée',
+  w1: 'Walt Disney',
+  w2: 'Bill Gates',
+  w3: 'Philip Kotler',
+  w4: '',
 
 }

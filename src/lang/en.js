@@ -74,5 +74,16 @@ export default {
   IntroVideos: 'Introduction videos',
   Bodcasts: 'Bodcasts',
   Announcements: 'Announcements',
-  advertising: 'advertising'
+  advertising: 'advertising',
+  Cancel: 'Cancel',
+  OK: 'OK',
+  q1: 'You can come up with the greatest ideas, but you\'ll need someone to help you turn those ideas into results. We can\'t reach the top unless we all work together.',
+  q2: 'If she had one dollar left, she would spend it on public relations',
+  q3: 'You can learn marketing in a day, but you will spend your whole life mastering it',
+  q4: 'Stopping advertising to save money is like stopping a clock to save time',
+  q5: 'Marketing is a race without a finish line',
+  w1: 'Walt Disney',
+  w2: 'Bill Gates',
+  w3: 'Philip Kotler',
+  w4: '',
 }
